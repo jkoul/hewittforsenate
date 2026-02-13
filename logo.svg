@@ -1,0 +1,23 @@
+<svg viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chris Hewitt for New York State Senate">
+  
+  <!-- Mountain Icon -->
+  <path d="M40 110 L80 60 L110 95 L135 70 L175 110 Z" fill="none" stroke="#2F4F3F" stroke-width="4"></path>
+
+  <!-- Name -->
+  <text x="200" y="85" font-family="Inter, sans-serif" font-size="48" font-weight="700" fill="#1F3A5F">
+    HEWITT
+  </text>
+
+  <text x="200" y="50" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="#2F4F3F">
+    CHRIS
+  </text>
+
+  <!-- Divider -->
+  <line x1="200" y1="100" x2="520" y2="100" stroke="#B23A3A" stroke-width="3"></line>
+
+  <!-- Office -->
+  <text x="200" y="130" font-family="Inter, sans-serif" font-size="18" letter-spacing="2" fill="#1F3A5F">
+    NEW YORK STATE SENATE
+  </text>
+
+</svg>
