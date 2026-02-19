@@ -3,18 +3,21 @@ const openBtn = document.getElementById("openModal");
 const closeOverlay = document.getElementById("closeModal");
 const closeBtn = document.getElementById("closeModalBtn");
 
-openBtn.addEventListener("click", () => {
-  modal.classList.add("active");
-  document.body.style.overflow = "hidden";
-});
+if (openBtn && modal) {
+  openBtn.addEventListener("click", () => {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+}
 
 function closeModal() {
+  if (!modal) return
   modal.classList.remove("active");
   document.body.style.overflow = "auto";
 }
 
-closeOverlay.addEventListener("click", closeModal);
-closeBtn.addEventListener("click", closeModal);
+closeOverlay?.addEventListener("click", closeModal);
+closeBtn?.addEventListener("click", closeModal);
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();

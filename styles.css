@@ -3,14 +3,16 @@
 ======================== */
 
 :root {
-  --color-primary: #C62828;
+  --color-primary: #9E091E;
   --color-navy: #0B1F3A;
+  --color-sky-blue: #4a95da;
   --color-dark-green: #143927;
   --color-light: #F4F4F2;
   --color-light-gray: #D7D7D5;
   --color-slate: #3E4C59;
+  --color-dark-slate: #191919;
 
-  --font-heading: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Georgia", system-ui, -apple-system, serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
 
   --max-width: 1100px;
@@ -52,6 +54,11 @@ body {
 
 .logo {
   text-align: center;
+}
+
+.logo-img {
+  width: auto;
+  max-width: 100%;
 }
 
 .candidate-name {
@@ -111,6 +118,75 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.counties-list span {
+  display: inline-block;
+  /* vertical-align: middle; */
+  position: relative;
+}
+
+.counties-list span:not(:first-child)::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background-color: var(--color-sky-blue);
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  margin-top: -1px;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 122.88 116.864'%3E%3Cpolygon points='61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 122.88 116.864'%3E%3Cpolygon points='61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+.bio-section {
+  background: var(--color-sky-blue);
+  color: var(--color-light);
+  /* padding: 1rem 0; */
+}
+
+.bio-section>div {
+  padding: 1rem;
+}
+
+.bio-section .bio-intro {
+  padding: 1.5rem 3rem;
+}
+
+.platform {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  background: var(--color-light);
+  color: var(--color-navy);
+}
+
+.platform .subsection {
+  width: 50%;
+  padding: 1rem;
+}
+
+.divider {
+  width: 0;
+  align-self: stretch;
+  border-style: solid;
+  border-color: rgba(88, 88, 88, 0.2);
+  border-width: 0 1px;
+}
+
+.bio-closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bio-closing .tagline {
+  padding-top: 1rem;
+  font-size: 1.4rem;
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* ========================
@@ -183,6 +259,15 @@ img.email-icon {
   opacity: 0.8;
 }
 
+.footer-logo {
+  margin-top: 1.5rem;
+  width: clamp(5rem, 25vw, 8rem);
+}
+
+.site-footer .disclaimer {
+  padding-top: 1rem;
+}
+
 /* ========================
    Modal
 ======================== */
@@ -251,6 +336,20 @@ img.email-icon {
     flex-direction: column;
   }
 
+  .platform {
+    flex-direction: column;
+  }
+
+  .platform .subsection {
+    width: 100%;
+  }
+
+  .platform .divider {
+    width: auto;
+    height: 0;
+    border-width: 1px 0;
+  }
+
   .btn {
     width: 100%;
   }
@@ -258,4 +357,12 @@ img.email-icon {
   .cta-group {
     flex-direction: column;
   }
+}
+
+ul {
+  padding-left: 40px;
+}
+
+.bold {
+  font-weight: 700;
 }
